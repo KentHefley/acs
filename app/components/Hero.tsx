@@ -51,7 +51,7 @@ export default function Component() {
             </div>
             <div className="space-x-4">
               <Button asChild className="bg-white text-primary hover:bg-green-100">
-                <Link href="/demo">
+                <Link href="/about">
                   About Us
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
