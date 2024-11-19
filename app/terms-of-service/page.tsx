@@ -36,14 +36,14 @@ export default function TermsOfService() {
           <ScrollArea className="h-[calc(100vh-8rem)] pr-4">
             <section id="acceptance" className="mb-8 scroll-mt-20">
               <h2 className="text-2xl font-semibold mb-4">1. Acceptance of Terms</h2>
-              <p>By accessing or using America’s Cart Service&#39;s services, including shopping cart recovery,
+              <p>By accessing or using America’s Cart Service services, including shopping cart recovery,
                 product inventory, and GPS tracking solutions, you agree to be bound by these Terms. If you do
                 not agree with any part of these Terms, you must not use our services.</p>
             </section>
             
             <section id="provided" className="mb-8 scroll-mt-20">
               <h2 className="text-2xl font-semibold mb-4">2. Services Provided</h2>
-              <p className="mb-3">America's Cart Service&#39s provides the following services:</p>
+              <p className="mb-3">America's Cart Service provides the following services:</p>
               <ul className="list-disc ml-5 mb-3">
                 <li><b>Shopping Cart Recovery:</b> Locating, retrieving, and returning lost or stolen shopping carts. </li>
                 <li><b>Product Inventory:</b> Assisting businesses with the management of their product inventory using modern tracking system.</li>
@@ -54,12 +54,12 @@ export default function TermsOfService() {
             
             <section id="agreements" className="mb-8 scroll-mt-20">
               <h2 className="text-2xl font-semibold mb-4">3. Service Agreements</h2>
-              <p>For businesses engaging America’s Cart Service&#39s  for our services, a separate Service Agreement will be signed. This agreement will outline the specific terms, conditions, and costs of the services provided. Clients must adhere to the terms outlined in the signed agreement.</p>
+              <p>For businesses engaging America’s Cart Service  for our services, a separate Service Agreement will be signed. This agreement will outline the specific terms, conditions, and costs of the services provided. Clients must adhere to the terms outlined in the signed agreement.</p>
             </section>
             
             <section id="gps" className="mb-8 scroll-mt-20">
               <h2 className="text-2xl font-semibold mb-4">4. Use of GPS Tracking Devices</h2>
-              <p>Clients utilizing our GPS tracking devices for shopping cart tracking must ensure they comply with all applicable local and federal laws concerning the use of tracking technology. America’s Cart Service&#39s is not responsible for any misuse of these devices by clients.</p>
+              <p>Clients utilizing our GPS tracking devices for shopping cart tracking must ensure they comply with all applicable local and federal laws concerning the use of tracking technology. America’s Cart Service is not responsible for any misuse of these devices by clients.</p>
             </section>
             
             <section id="client" className="mb-8 scroll-mt-20">
@@ -69,7 +69,7 @@ export default function TermsOfService() {
             
             <section id="liability" className="mb-8 scroll-mt-20">
               <h2 className="text-2xl font-semibold mb-4">6. Limitation of Liability</h2>
-              <p>To the maximum extent permitted by law, America’s Cart Service&#39s shall not be liable for any damages, including but not limited to loss of profits, data, or use, arising from or in connection with our services. This includes delays, errors, or interruptions in services provided.</p>
+              <p>To the maximum extent permitted by law, America’s Cart Service shall not be liable for any damages, including but not limited to loss of profits, data, or use, arising from or in connection with our services. This includes delays, errors, or interruptions in services provided.</p>
             </section>
             
             <section id="payment" className="mb-8 scroll-mt-20">
@@ -79,12 +79,12 @@ export default function TermsOfService() {
             
             <section id="termination" className="mb-8 scroll-mt-20">
               <h2 className="text-2xl font-semibold mb-4">8. Termination of Services</h2>
-              <p>Either party may terminate the service agreement at any time, subject to any terms in the signed Service Agreement. Upon termination, all equipment or GPS tracking devices provided by America’s Cart Service&#39s must be returned in good condition.</p>
+              <p>Either party may terminate the service agreement at any time, subject to any terms in the signed Service Agreement. Upon termination, all equipment or GPS tracking devices provided by America’s Cart Service must be returned in good condition.</p>
             </section>
             
             <section id="intellectual" className="mb-8 scroll-mt-20">
               <h2 className="text-2xl font-semibold mb-4">9. Intellectual Property</h2>
-              <p>All content, including but not limited to logos, designs, and information found on America’s Cart Services website or materials, is the intellectual property of America’s Cart Service's and may not be used without prior written permission.</p>
+              <p>All content, including but not limited to logos, designs, and information found on America’s Cart Service website or materials, is the intellectual property of America’s Cart Service and may not be used without prior written permission.</p>
             </section>
             
             <section id="privacy" className="mb-8 scroll-mt-20">
