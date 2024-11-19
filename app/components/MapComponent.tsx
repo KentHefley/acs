@@ -20,7 +20,7 @@ export default function MapComponent() {
         lng: -112.072490,
       };
 
-      const googleMapsApiKey = process.env.GOOGLE_MAPS_API;
+      const googleMapsApiKey = process.env.GOOGLE_MAPS_API_KEY;
 
       if (!googleMapsApiKey) {
           return <div>Error: Google Maps API key is not set!</div>;
