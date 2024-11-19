@@ -131,7 +131,7 @@ export default function Contact() {
             </TabsContent>
             {/* Second Tab */}
             <TabsContent value="support">
-            <p className="text-muted-foreground text-sm"><span className="font-semibold">Existing clients: </span>Report a problem or request service. If you have located carts that need retreival, please give us location details and image files if available. Please provide your client ID</p>
+            <p className="text-muted-foreground text-sm"><span className="font-semibold">Existing clients: </span>Report a problem or request service. If you have located carts that need retreival, please give us location details and image files if available.</p>
             <form 
               id={supportForm.id} 
               onSubmit={supportForm.onSubmit} 
