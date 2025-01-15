@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 export const metadata: Metadata = {
   title: "America's Cart Service",
   description: "American Cart Service specializes in the recovery of stolen and abandoned shopping carts for retail businesses, helping companies reduce losses and improve operational efficiency.",
-  keywords: ["shopping cart recovery", "shopping cart retrieval", "stolen cart recovery", "misplaced shopping carts", "retail cart services", "cart retrieval service", "Arizona shopping cart recovery", "Texas shopping cart recovery", "lost shopping carts", "cart recovery solutions", "American Cart Service"],
+  keywords: ["abandoned shopping carts", "shopping cart recovery", "shopping cart retrieval", "stolen cart recovery", "misplaced shopping carts", "retail cart services", "cart retrieval service", "Arizona shopping cart recovery", "Texas shopping cart recovery", "lost shopping carts", "cart recovery solutions", "American Cart Service"],
 };
 
 const inter = Inter({ subsets: ['latin'] })
