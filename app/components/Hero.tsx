@@ -46,7 +46,7 @@ export default function Component() {
               Reliable Shopping Cart Recovery Services for America’s Retailers
               </h1>
               <p className="mx-auto max-w-[700px] text-green-100 md:text-xl">
-                We specialize in recovering lost, stolen, and abandoned shopping carts for retail and grocery stores, helping you save money and improve customer experience.
+                America's Cart Service specializes in recovering lost, stolen, and abandoned shopping carts for retail and grocery stores, helping you save money and improve customer experience.
               </p>
             </div>
             <div className="space-x-4">
