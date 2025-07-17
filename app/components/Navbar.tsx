@@ -50,7 +50,7 @@ export default function Navbar() {
 
         <div className="flex items-center justify-end md:col-span-3 col-span-6">
             <Link href="/contact">
-            <Button className="hidden md:block">Contact Us</Button>
+            <Button className="hidden md:block">Report Carts</Button>
             </Link>
                 <div className="sm:hidden">
                 <MobileMenu/>
