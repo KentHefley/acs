@@ -55,7 +55,7 @@ export default function Contact() {
     <div className="container mx-auto px-8 lg:px-12 py-8 max-w-7xl">
       <h1 className="text-3xl md:text-4xl font-bold mb-8 text-center">Contact Us</h1>
       <ShoppingCart size={96} className="mb-4 mx-auto text-gray-300" />
-      <p className="text-sm max-w-[500px] mx-auto mb-4 p-5 bg-primary/10 rounded-md">We’re here to help! Contact our sales team to learn about our shopping cart recovery services, or reach out to support if you're an existing customer needing assistance.</p>
+      <p className="text-sm max-w-[500px] mx-auto mb-4 p-5 bg-primary/10 rounded-md">We’re here to help! Contact our sales team to learn about our shopping cart recovery services. Reach out to support if you need assistance with lost carts, or have spotted stray shopping carts. Include images if possible.</p>
       <section className="flex flex-col items-center justify-center mb-10">
       <Card className="max-w-[500px] w-full">
         <Tabs defaultValue="sales">
