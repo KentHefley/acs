@@ -65,7 +65,7 @@ export default function Contact() {
                 Talk to Sales
               </TabsTrigger>
               <TabsTrigger value="support">
-                Report Lost Cart
+                Report Lost Carts
               </TabsTrigger>
             </TabsList>
             <TabsContent value="sales">
