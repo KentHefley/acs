@@ -58,14 +58,14 @@ export default function Contact() {
       <p className="text-sm max-w-[500px] mx-auto mb-4 p-5 bg-primary/10 rounded-md">We’re here to help! Contact our sales team to learn about our shopping cart recovery services. Reach out to support if you need assistance with lost carts, or have spotted stray shopping carts. Include images if possible.</p>
       <section className="flex flex-col items-center justify-center mb-10">
       <Card className="max-w-[500px] w-full">
-        <Tabs defaultValue="sales">
+        <Tabs defaultValue="support">
           <CardContent className="mt-5">
             <TabsList className="grid grid-cols-2">
               <TabsTrigger value="sales">
                 Talk to Sales
               </TabsTrigger>
               <TabsTrigger value="support">
-                Support
+                Report Lost Cart
               </TabsTrigger>
             </TabsList>
             <TabsContent value="sales">
