@@ -1,52 +1,64 @@
-"use server";
+/* ------------------------------------------------------------------
+   Server actions – require a captcha token, let Getform verify it
+   ------------------------------------------------------------------ */
+'use server'
 
-import { redirect } from "next/navigation";
-import { parseWithZod } from "@conform-to/zod";
-import { submissionSchema } from "./zodSchema";
+import { parseWithZod } from '@conform-to/zod'
+import { submissionSchema } from './zodSchema'
+import { redirect } from 'next/navigation'
 
+type Submission = Awaited<ReturnType<typeof parseWithZod>>
+type ReplyFn    = Submission['reply']
 
-export async function TalkToSalesAction(prevState: unknown, formData: FormData) {
+async function forwardToGetform(
+  formData: FormData,
+  endpoint: string,
+  reply: ReplyFn,
+) {
+  const token = formData.get('g-recaptcha-response') as string | null
+  if (!token || token.length === 0) {
+    return { ...reply(), formError: 'Please complete the captcha.' }
+  }
 
-    const submission = parseWithZod(formData, {
-        schema: submissionSchema,
-    });
+  const resp = await fetch(endpoint, {
+    method: 'POST',
+    body: formData,          // still includes the token for Getform to verify
+  })
 
-    if(submission.status !== "success") {
-        return submission.reply()
-    }
+  if (!resp.ok) {
+    console.error('Getform rejected:', await resp.text())
+    return { ...reply(), formError: 'Unable to send message.' }
+  }
 
-
-const response = await fetch(process.env.TALK_TO_SALES_URL!, {
-    method: "POST",
-    body: formData,
-})
-
-if (!response.ok) {
-    throw new Error("Failed to send message to sales team")
+  redirect('/success')
 }
-return redirect("/success")
+
+/* ---------- Talk to Sales ---------- */
+export async function TalkToSalesAction(
+  _prev: unknown,
+  formData: FormData,
+) {
+  const submission = await parseWithZod(formData, { schema: submissionSchema })
+  if (submission.status !== 'success') return submission.reply()
+
+  return forwardToGetform(
+    formData,
+    process.env.TALK_TO_SALES_URL!,
+    submission.reply,
+  )
 }
 
-// Support Ticket Action
+/* ---------- Support Ticket ---------- */
+export async function SupportTicketAction(
+  _prev: unknown,
+  formData: FormData,
+) {
+  const submission = await parseWithZod(formData, { schema: submissionSchema })
+  if (submission.status !== 'success') return submission.reply()
 
-export async function SupportTicketAction(prevState: unknown, formData: FormData) {
-
-    const submission = parseWithZod(formData, {
-        schema: submissionSchema,
-    });
-
-    if(submission.status !== "success") {
-        return submission.reply()
-    }
-
-
-const response = await fetch(process.env.SUPPORT_TICKET_URL!, {
-    method: "POST",
-    body: formData,
-})
-
-if (!response.ok) {
-    throw new Error("Failed to send message to sales team")
-}
-return redirect("/success")
+  return forwardToGetform(
+    formData,
+    process.env.SUPPORT_TICKET_URL!,
+    submission.reply,
+  )
 }
