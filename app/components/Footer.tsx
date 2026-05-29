@@ -1,3 +1,7 @@
+'use client'
+
+import { useState, useEffect } from 'react'
+
 import Link from "next/link"
 import Image from "next/image"
 import React from "react";
@@ -10,9 +14,15 @@ export const footerLinks = [
     { name: 'Contact', href: '/contact' },
 ]
 
-const date = new Date().getFullYear();
 
 export default function Footer() {
+
+   const [currentYear, setCurrentYear] = useState<number | null>(null)
+
+  useEffect(() => {
+    setCurrentYear(new Date().getFullYear())
+  }, [])
+
   return (
     <>
     <div className="border-t-1 border-transparent bg-gradient-to-r from-green-400 to-emerald-600">
@@ -35,7 +45,7 @@ export default function Footer() {
         ))}
         </div>
         <div>
-            <p className="text-xs text-gray-500 mt-4">© {date} America's Cart Service. All rights reserved.</p>
+            <p className="text-xs text-gray-500 mt-4">© {currentYear || new Date().getFullYear()} America's Cart Service. All rights reserved.</p>
         </div>
     </div>
     </>
